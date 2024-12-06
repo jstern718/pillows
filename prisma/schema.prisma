@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://jstern:password@localhost:5432/pillows"
+}
+
+model User {
+  id        Int     @id @default(autoincrement())
+  email     String  @unique
+  password  String
+  name      String
+}
+
+model Pillow {
+  id        Int         @id @default(autoincrement())
+  intro     String
+  title     String
+  content   String
+  link      String
+  rank      Int
+  posts     PillowsInPosts[]
+}
+
+model Post {
+    id              Int         @id @default(autoincrement())
+    title           String
+    numberLines     Int
+    lines           LinesInPost[]
+    pillows         PillowsInPosts[]
+}
+
+model Line {
+    id          Int         @id @default(autoincrement())
+    lineNumber  Int
+    content     String
+    post        LinesInPost[]
+}
+
+model PillowsInPosts {
+  id            Int       @id @default(autoincrement())
+  pillow        Pillow    @relation(fields: [pillowId], references: [id])
+  pillowId      Int
+  post          Post      @relation(fields: [postId], references: [id])
+  postId        Int
+}
+
+model LinesInPost {
+  id            Int       @id @default(autoincrement())
+  line          Line      @relation(fields: [lineId], references: [id])
+  lineId        Int
+  post          Post      @relation(fields: [postId], references: [id])
+  postId        Int
+}
