@@ -119,11 +119,7 @@ export async function deletePage(id: string) {
   {
     name: "Pillowcases",
     link: "/pillowcases",
-  },
-//   {
-//     name: "I'm Not Sure Want I Want",
-//     link: "/questions",
-//   },
+  }
 ].forEach((page) => {
   fakePages.create({
     ...page,

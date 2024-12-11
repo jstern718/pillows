@@ -1,7 +1,7 @@
-import QuestionItem from '../components/QuestionItem.jsx';
-import Hero from '../components/Hero.jsx';
+import QuestionItem from '../app/components/QuestionItem.jsx';
+import Hero from '../app/components/Hero.jsx';
 
-import questionsList from '../pillowLists/questionsList.jsx';
+import questionsList from './questionsList.jsx';
 const pillowList = questionsList;
 
 function Questions() {
