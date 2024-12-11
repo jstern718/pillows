@@ -10,56 +10,60 @@ const Accordion = ( {textA, accordionList} ) => {
 
   return (
     <>
-      <div className="accordion">
-        <h2 id="accordion-flush-heading-1">
-          <button
-            type="button"
-            className="flex items-center justify-between w-full mb-2 text-left text-gray-500 dark:text-gray-400 gap-3 focus:outline-0 focus:outline-indigo-200 shadow-none focus:shadow-none"
-            data-accordion-target="#accordion-flush-body-1"
-            aria-expanded={isOpen}
-            aria-controls="accordion-flush-body-1"
-            onClick={toggleAccordion}
-          >
-            <div>
-                <h5 className="my-3 font-bold accordion-title">Some Helpful Info:</h5>
-                <li className="accordion-bullet">
-                    <p className="text-gray-500 dark:text-gray-400 text-pretty text-wrap accordion-text text-lg">
-                        {textA}
-                    </p>
-                </li>
-                <p className={`accordion-bullet text-center mt-3 ${isOpen ? 'hidden' : ''}`}>Read More</p>
-            </div>
-          </button>
-        </h2>
-        <div
-          id="accordion-flush-body-1"
-          className={`${isOpen ? '' : 'hidden'}`}
-          aria-labelledby="accordion-flush-heading-1"
-        >
+        <div className="divC mt-0 mb-5 p-2 pb-1 bg-indigo-200 rounded-lg border-solid border-1 border-gray-300 shadow-lg shadow-gray-600/65">
+            <ul className="text-md text-left m-3 ml-5 font-light list-disc">
+                <div className="accordion">
+                    <h2 id="accordion-flush-heading-1">
+                    <button
+                        type="button"
+                        className="flex items-center justify-between w-full mb-2 text-left text-gray-500 dark:text-gray-400 gap-3 focus:outline-0 focus:outline-indigo-200 shadow-none focus:shadow-none"
+                        data-accordion-target="#accordion-flush-body-1"
+                        aria-expanded={isOpen}
+                        aria-controls="accordion-flush-body-1"
+                        onClick={toggleAccordion}
+                    >
+                        <div>
+                            <h5 className="my-3 font-bold accordion-title">Some Helpful Info:</h5>
+                            <li className="accordion-bullet">
+                                <p className="text-gray-500 dark:text-gray-400 text-pretty text-wrap accordion-text text-lg">
+                                    {textA}
+                                </p>
+                            </li>
+                            <p className={`accordion-bullet text-center mt-3 ${isOpen ? 'hidden' : ''}`}>Read More</p>
+                        </div>
+                    </button>
+                    </h2>
+                    <div
+                    id="accordion-flush-body-1"
+                    className={`${isOpen ? '' : 'hidden'}`}
+                    aria-labelledby="accordion-flush-heading-1"
+                    >
 
-            <button
-                type="button"
-                className="flex items-center justify-between w-full mb-2 text-left text-gray-500 dark:text-gray-400 gap-3 focus:outline-0 focus:outline-indigo-200 shadow-none focus:shadow-none"
-                data-accordion-target="#accordion-flush-body-1"
-                aria-expanded={isOpen}
-                aria-controls="accordion-flush-body-1"
-                onClick={toggleAccordion}
-            >
-                <div>
-                    {accordionList.map((item, index) => (
-                        <li key={`accordion-${index}`} className="w-full accordion-bullet">
-                            <p className="mb-1 text-gray-500 dark:text-gray-400 text-pretty text-wrap accordion-text">
-                                {item}
-                            </p>
-                        </li>
-                    ))}
+                        <button
+                            type="button"
+                            className="flex items-center justify-between w-full mb-2 text-left text-gray-500 dark:text-gray-400 gap-3 focus:outline-0 focus:outline-indigo-200 shadow-none focus:shadow-none"
+                            data-accordion-target="#accordion-flush-body-1"
+                            aria-expanded={isOpen}
+                            aria-controls="accordion-flush-body-1"
+                            onClick={toggleAccordion}
+                        >
+                            <div>
+                                {accordionList.map((item, index) => (
+                                    <li key={`accordion-${index}`} className="w-full accordion-bullet">
+                                        <p className="mb-1 text-gray-500 dark:text-gray-400 text-pretty text-wrap accordion-text">
+                                            {item}
+                                        </p>
+                                    </li>
+                                ))}
 
 
-                    <p className="accordion-bullet text-center mt-3">Show Less</p>
+                                <p className="accordion-bullet text-center mt-3">Show Less</p>
+                            </div>
+                        </button>
+                    </div>
                 </div>
-            </button>
+            </ul>
         </div>
-      </div>
     </>
   );
 };

@@ -1,17 +1,16 @@
-
 import PageTemplate from '../components/PageTemplate.jsx';
 
-import mostPopularList from '../pillowLists/mostPopularList.jsx';
-const pillowList = mostPopularList;
-import mostPopularText from '../pageText/mostPopularText.jsx';
-const pageText = mostPopularText;
+import thinList from '../pillowLists/thinList.jsx';
+const pillowList = thinList;
+import thinText from '../pageText/thinText.jsx';
+const pageText = thinText;
 
 const textA = pageText.shift();
 const accordionList = pageText;
 
-const pageTitle = "The Most Popular Pillows";
+const pageTitle = "The Best Thin (Low Profile) Pillows";
 
-function MostPopular() {
+function Thin() {
 
     return (
         <>
@@ -24,6 +23,10 @@ function MostPopular() {
             />
         </>
     )
+
+
+
+
 }
 
-export default MostPopular
+export default Thin

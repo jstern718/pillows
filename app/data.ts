@@ -9,12 +9,8 @@ import invariant from "tiny-invariant";
 
 type PageMutation = {
   id?: string;
-  first?: string;
-  last?: string;
-  avatar?: string;
-  twitter?: string;
-  notes?: string;
-  favorite?: boolean;
+  name?: string;
+  link?: string;
 };
 
 export type PageRecord = PageMutation & {
@@ -67,7 +63,7 @@ export async function getPages(query?: string | null) {
   let pages = await fakePages.getAll();
   if (query) {
     pages = matchSorter(pages, query, {
-      keys: ["first", "last"],
+      keys: ["name"],
     });
   }
   return pages.sort(sortBy("last", "createdAt"));
@@ -97,13 +93,37 @@ export async function deletePage(id: string) {
 
 [
   {
-    name: "MostPopular",
+    name: "Main Page",
+    link: "/",
+  },
+  {
+    name: "Most Popular",
     link: "/mostpopular",
   },
   {
-    name: "Cooling",
+    name: "Cooling Pillows",
     link: "/cooling",
   },
+  {
+    name: "Thin Pillows",
+    link: "/thin",
+  },
+  {
+    name: "Memory Foam",
+    link: "/memoryfoam",
+  },
+  {
+    name: "Shredded Foam",
+    link: "/shreddedfoam",
+  },
+  {
+    name: "Pillowcases",
+    link: "/pillowcases",
+  },
+//   {
+//     name: "I'm Not Sure Want I Want",
+//     link: "/questions",
+//   },
 ].forEach((page) => {
   fakePages.create({
     ...page,

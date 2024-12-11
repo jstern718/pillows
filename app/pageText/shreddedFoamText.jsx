@@ -1,0 +1,13 @@
+const textA = "What you first start comparing pillows, shredded memory foam pillows seem like a good compromise between the support offered by solid memory foam pillows and the luxurious fluffiness of down and down alternative pillows. This can be true, but there are a lot of important caveats. One of these caveats is that shredded memory foam pillows are often aggressively high. Because they don't collapse down as much under the weight of your head (like with down or down alternative pillows) this can be a real pain in the neck. Thats why we almost always recommend buying adjustable versions of these pillows. This way, you can take foam out of the pillow until it is the right height for you.";
+
+const textB = "Another caveat is that shredded memory foam pillows also get extremely hot. The foam itself absorbs a lot of your body heat (even more than solid memory foam because your head and neck sink further into it). As you lay on it, shredded memory foam absorbs more and more heat, going further and further up in temperature. On top of this, shredded memory foam pillows don't benefit from some of the ways in which solid memory foam pillows can prevent overheating. Claims of gel cooling material in the foam are usually not to be trusted, or have an almost unnoticable effect. And, likely because shredded memory foam his fairly heavy, pillow companies seem to have gotten together and agreed to sell them with thick polyester lining material, which does even more to lock in the heat.";
+
+const textC = "There are two ways to get around the heat problem. The first is to swap out memory foam for latex, which doesn't absorb anywhere near as much heat. Latex can sometimes be a take it or leave it proposition, with many pillow buyers finding it a bit too springy. While this is still somewhat of an issue with shredded latex, it is less of an issue here than with solid latex pillows.";
+
+const textD = "The second way to get around the heat is for the pillow to have a cooling surface on it. As we've said elsewhere in this guide, most cooling pillow covers only cool you for the first minute or two before causing you and your pillow to reach and new higher equilibrium temperature. But there are some materials that can help. A full gel layer on the pillow is one such option, but it tends to only be available for solid latex pillow. For shredded foam pillows, the best options seems to be a grid pattern undearneath the liner or pillowcase. This was pioneared by Purple, and we've included them as a pricey option below, but other companies have tried to make the same thing work for less money.";
+
+const accordionList = [textA, textB, textC, textD];
+
+
+
+export default (accordionList);

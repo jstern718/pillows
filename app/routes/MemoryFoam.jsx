@@ -1,17 +1,16 @@
-
 import PageTemplate from '../components/PageTemplate.jsx';
 
-import mostPopularList from '../pillowLists/mostPopularList.jsx';
-const pillowList = mostPopularList;
-import mostPopularText from '../pageText/mostPopularText.jsx';
-const pageText = mostPopularText;
+import memoryFoamList from '../pillowLists/memoryFoamList.jsx';
+const pillowList = memoryFoamList;
+import memoryFoamText from '../pageText/memoryFoamText.jsx';
+const pageText = memoryFoamText;
 
 const textA = pageText.shift();
 const accordionList = pageText;
 
-const pageTitle = "The Most Popular Pillows";
+const pageTitle = "The Best Memory Foam Pillows";
 
-function MostPopular() {
+function MemoryFoam() {
 
     return (
         <>
@@ -23,7 +22,7 @@ function MostPopular() {
                 chartImage={null}
             />
         </>
-    )
+  )
 }
 
-export default MostPopular
+export default MemoryFoam;
